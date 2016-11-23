@@ -61,7 +61,6 @@ $(document).ready(function () {
     if(localStorage.getItem('todos')){
       $('.items').html(localStorage.getItem('todos') + "<span id=\"clear\" class=\"show-more\">Clear</clear>");
       $('#clear').click(function () {
-        //localStorage.clear();
         localStorage.setItem('todos', "");
         $('.items').html("");
       });
