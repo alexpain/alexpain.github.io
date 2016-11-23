@@ -55,6 +55,21 @@ $(document).ready(function () {
     $('.tile').css("background-image","url('img/background10.jpg')");
   });
 
+
+
+  $('.likedd').click(function () {
+    if(localStorage.getItem('todos')){
+      $('.items').html(localStorage.getItem('todos') + "<span id=\"clear\" class=\"show-more\">Clear</clear>");
+      $('#clear').click(function () {
+        //localStorage.clear();
+        localStorage.setItem('todos', "");
+        $('.items').html("");
+      });
+    }else{
+      alert('LocalStorage clear');
+    }
+  });
+
   $('.close').click(function() {
     $('.m-window').css("display","none");
     $('#wrap').css("display","none");
@@ -105,15 +120,40 @@ $(document).ready(function () {
               <span class="summary"><%=count[i].summary%></span><br>\
               <span class="updated"><%=count[i].updated_in_days_formatted%></span>\
             </div>\
+            <img class="like" src="img/heart-outline.png" name="<%=i%>">\
           <% } %>\
           <span class="show-more" onClick="showMore()">Show more</span>';
         $('.items').html( _.template(tmpl)({count: arr}) );
+
         $('#wrap').css("display","none");
         $('.load').css("display","none");
+
+        $('.like').bind('click',function() {
+
+          $(this).attr("class", "like liked");
+          $('.liked').attr("src","img/heart-black.png");
+          let i = $(this).attr('name');
+          i = +i;
+
+          let tmpl = '\
+              <div class="listing-list" onClick="moreInfo(<%=ii%>)" >\
+                <img class="" src="<%=count[ii].img_url%>"> \
+                <span class="price"><%=count[ii].price_formatted%></span><br>\
+                <span class="title"><%=count[ii].title%></span><br>\
+                <span class="summary"><%=count[ii].summary%></span><br>\
+                <span class="updated"><%=count[ii].updated_in_days_formatted%></span>\
+              </div>';
+          let todos = localStorage.getItem('todos') +  _.template(tmpl)({count: arr, ii: i});
+
+          localStorage.setItem('todos', todos);
+        });
+
         $('html, body').animate({
           scrollTop:$('.items').offset().top
         },1000);
+
       },
+
       error: function () {
         alert('not ok');
       }
@@ -156,11 +196,33 @@ function showMore() {
             <span class="summary"><%=count[i].summary%></span><br>\
             <span class="updated"><%=count[i].updated_in_days_formatted%></span>\
           </div>\
+          <img class="like" src="img/heart-outline.png" name="<%=i%>">\
         <% } %>\
         <span class="show-more" onClick="showMore()">Show more</span>';
       $('.items').append( _.template(tmpl)({count: a, p: page}) );
       $('#wrap').css("display","none");
       $('.load').css("display","none");
+
+      $('.like').bind('click',function() {
+
+        $(this).attr("class", "like liked");
+        $('.liked').attr("src","img/heart-black.png");
+        let i = $(this).attr('name');
+        i = +i;
+
+        let tmpl = '\
+            <div class="listing-list" onClick="moreInfo(<%=ii%>)" >\
+              <img class="" src="<%=count[ii].img_url%>"> \
+              <span class="price"><%=count[ii].price_formatted%></span><br>\
+              <span class="title"><%=count[ii].title%></span><br>\
+              <span class="summary"><%=count[ii].summary%></span><br>\
+              <span class="updated"><%=count[ii].updated_in_days_formatted%></span>\
+            </div>';
+        let todos = localStorage.getItem('todos') +  _.template(tmpl)({count: arr, ii: i});
+
+        localStorage.setItem('todos', todos);
+      });
+
       if(page == 1){
         $('html, body').animate({
           scrollTop:$('.items').offset().top
