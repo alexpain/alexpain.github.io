@@ -149,7 +149,7 @@ function showMore() {
       $('.show-more').remove();
       let tmpl = '\
         <% for (var i=0; i < count.length; i++) { %> \
-          <div class="listing-list" onClick="moreInfo(<%=i%>)" >\
+          <div class="listing-list" onClick="moreInfo(<%=i+((p-1)*20)%>)" >\
             <img class="" src="<%=count[i].img_url%>"> \
             <span class="price"><%=count[i].price_formatted%></span><br>\
             <span class="title"><%=count[i].title%></span><br>\
@@ -158,7 +158,7 @@ function showMore() {
           </div>\
         <% } %>\
         <span class="show-more" onClick="showMore()">Show more</span>';
-      $('.items').append( _.template(tmpl)({count: a}) );
+      $('.items').append( _.template(tmpl)({count: a, p: page}) );
       $('#wrap').css("display","none");
       $('.load').css("display","none");
       if(page == 1){
@@ -177,4 +177,14 @@ function showMore() {
 function moreInfo(i) {
   $('.m-window').css("display","block");
   $('#wrap').css("display","block");
+  $('.photo').attr("src",arr[i].img_url);
+  $('.price').html(arr[i].price_formatted);
+  $('.bathroom').html(arr[i].bathroom_number);
+  $('.bedroom').html(arr[i].bedroom_number);
+  $('.type').html(arr[i].property_type);
+
+  let map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: arr[i].latitude, lng: arr[i].longitude},
+    zoom: 17
+  });
 }
