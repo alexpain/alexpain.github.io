@@ -1,6 +1,18 @@
 'use strict';
 
-let app = angular.module('app', []);
+let app = angular.module('app', ['ngRoute']);
+app.config( ['$routeProvider', function($routeProvider) {
+		$routeProvider
+			.when('/first', {
+				templateUrl: 'tamplate.html'
+			})
+			.when('/second', {
+				templateUrl: 'tamplate.html'
+			})
+			.otherwise({
+				redirectTo: '/'
+			});
+	}]);
 
 app.controller('appController', function($scope, $http) {
 
@@ -124,7 +136,7 @@ app.controller('appController', function($scope, $http) {
     }
     $scope.pageBack = function() {
       $scope.currentPage = $scope.currentPage - 1;
-      
+
       $.ajax({
         type: "GET",
         url: "http://api.nestoria.co.uk/api",
