@@ -1,1 +1,20 @@
-<h1>asdasdasdasdsadas</h1>
+<!DOCTYPE html>
+
+  <div class="m-window">
+        <div class="header">
+          <img class="close" src="img/close.png" />
+        </div>
+        <div class="property">
+          <img class="photo" ng-src="{{ data[indx].img_url }}">
+          <span class="title">Property features</span>
+          <ul>
+            <li>Price: <span class="price">{{ data[indx].price_formatted }}</span></li>
+            <li><span class="bathroom">{{ data[indx].bathroom_number }}</span> bathroom</li>
+            <li><span class="bedroom">{{ data[indx].bedroom_number }}</span> bedroom</li>
+            <li>Property type: <span class="type">{{ data[indx].property_type }}</span></li>
+          </ul>
+          <div id="map" class="map">
+            
+          </div>
+        </div>
+  </div>

@@ -32,96 +32,99 @@
       <div class="hover"></div>
     </div>
     <div class="head">
-          <div  class="tl position-01 hov"></div>
-          <div  class="tl position-02 hov"></div>
-          <div  class="tl position-03 hov"></div>
-          <div  class="tl position-04 hov"></div>
-          <div  class="tl position-05 hov"></div>
+      <div  class="tl position-01 hov"></div>
+      <div  class="tl position-02 hov"></div>
+      <div  class="tl position-03 hov"></div>
+      <div  class="tl position-04 hov"></div>
+      <div  class="tl position-05 hov"></div>
 
-          <div class="main">
+      <div class="main">
 
-            <div class="tile position-0-0"></div>
-            <div class="tile position-0-1"></div>
-            <div class="tile  position-0-3"></div>
-            <div class="tile  position-0-4"></div>
-            <div class="tile  position-0-5"></div>
+        <div class="tile position-0-0"></div>
+        <div class="tile position-0-1"></div>
+        <div class="tile  position-0-3"></div>
+        <div class="tile  position-0-4"></div>
+        <div class="tile  position-0-5"></div>
 
-            <div class="tile  position-1-1"></div>
-            <div class="tile  position-1-3"></div>
-            <div class="tile  position-1-4"></div>
-            <div class="tile  position-1-5"></div>
-            <div class="tile  position-2-1"></div>
-            <div class="tile  position-2-2"></div>
+        <div class="tile  position-1-1"></div>
+        <div class="tile  position-1-3"></div>
+        <div class="tile  position-1-4"></div>
+        <div class="tile  position-1-5"></div>
+        <div class="tile  position-2-1"></div>
+        <div class="tile  position-2-2"></div>
 
-            <div class="search  position-2-3" >
+        <div class="search  position-2-3" >
 
-              <select class="country">
-                <option value="es">España</option>
-                <option value="uk">UK</option>
-                <option value="de">Deutschland</option>
-                <option value="fr">France</option>
-                <option value="ch">Chile</option>
-                <option value="mx">México</option>
-                <option value="br">Brasil</option>
-                <option value="in">India</option>
-                <option value="pe">Perú</option>
-                <option value="au">Australia</option>
-                <option value="ph">Philippines</option>
-                <option value="pl">Polska</option>
-              </select>
+          <select class="country">
+            <option value="es">España</option>
+            <option value="uk">UK</option>
+            <option value="de">Deutschland</option>
+            <option value="fr">France</option>
+            <option value="ch">Chile</option>
+            <option value="mx">México</option>
+            <option value="br">Brasil</option>
+            <option value="in">India</option>
+            <option value="pe">Perú</option>
+            <option value="au">Australia</option>
+            <option value="ph">Philippines</option>
+            <option value="pl">Polska</option>
+          </select>
 
-              <label>
-                <input  id="buy" type="radio" name="listing-type" value="buy" checked>
-                buy
-              </label>
+          <label>
+            <input  id="buy" type="radio" name="listing-type" value="buy" checked>
+            buy
+          </label>
 
-              <label>
-                <input id="sale"  type="radio" name="listing-type" value="sale">
-                sale
-              </label>
-
-
-              <input class="city" type="search" name="city" placeholder="London">
-              <img ng-click="search()" id="search" src="img/search.png" alt="search" />
-              <img ng-click="like()" class="likedd" src="img/heart.png" alt="" />
+          <label>
+            <input id="sale"  type="radio" name="listing-type" value="sale">
+            sale
+          </label>
 
 
-            </div>
+          <input class="city" type="search" name="city" placeholder="London">
+          <img ng-click="search()" id="search" src="img/search.png" alt="search" />
+          <img ng-click="like()" class="likedd" src="img/heart.png" alt="" />
 
-            <div class="tile  position-3-1"></div>
-            <div class="tile  position-3-2"></div>
-            <div class="tile  position-3-4"></div>
-            <div class="tile  position-3-5"></div>
-            <div class="tile  position-3-6"></div>
-            <div class="tile  position-4-1"></div>
-            <div class="tile  position-4-2"></div>
-            <div class="tile  position-4-3"></div>
-
-            <div class="logo  position-0-2">
-
-              <img id="nestoria" src="img/nestoria.png" alt="lab4" />
-            </div>
-
-          </div>
-
-          <div  class="tl position-1 hov"></div>
-          <div  class="tl position-2 hov"></div>
-          <div  class="tl position-3 hov"></div>
-          <div  class="tl position-4 hov"></div>
-          <div  class="tl position-5 hov"></div>
 
         </div>
 
-    <div class="items" ng-repeat="count in data">
-            <div class="listing-list">
-              <img class="" ng-src="{{count.img_url}}">
-              <span class="price">{{ count.price_formatted }}</span><br>
-              <span class="title">{{ count.title }}</span><br>
-              <span class="summary">{{ count.summary }}</span><br>
-              <span class="updated">{{ count.updated_in_days_formatted }}</span>
-            </div>
-            <img class="like" src="img/heart-outline.png" ng-click="liked($event)" name="{{ $index }}">
+        <div class="tile  position-3-1"></div>
+        <div class="tile  position-3-2"></div>
+        <div class="tile  position-3-4"></div>
+        <div class="tile  position-3-5"></div>
+        <div class="tile  position-3-6"></div>
+        <div class="tile  position-4-1"></div>
+        <div class="tile  position-4-2"></div>
+        <div class="tile  position-4-3"></div>
+
+        <div class="logo  position-0-2">
+
+          <img id="nestoria" src="img/nestoria.png" alt="lab4" />
+        </div>
+
+      </div>
+
+      <div  class="tl position-1 hov"></div>
+      <div  class="tl position-2 hov"></div>
+      <div  class="tl position-3 hov"></div>
+      <div  class="tl position-4 hov"></div>
+      <div  class="tl position-5 hov"></div>
+
     </div>
+
+    <div class="items" ng-repeat="count in data">
+      <a href="#{{ $index }}">
+        <div class="listing-list" >
+          <img class="" ng-src="{{count.img_url}}">
+          <span class="price">{{ count.price_formatted }}</span><br>
+          <span class="title">{{ count.title }}</span><br>
+          <span class="summary">{{ count.summary }}</span><br>
+          <span class="updated">{{ count.updated_in_days_formatted }}</span>
+        </div>
+      </a>
+        <img class="like" src="img/heart-outline.png" ng-click="liked($event)" name="{{ $index }}">
+    </div>
+    
     <div class="item">
     </div>
 
@@ -135,7 +138,7 @@
       </div>
     </div>
 
-    <a href="#/first">first</a>
+
     <div ng-view></div>
   </body>
 </html>
