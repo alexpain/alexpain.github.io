@@ -95,6 +95,12 @@ app.config( ['$routeProvider', function($routeProvider) {
 	    center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
 	    zoom: 17
 	  });
+		let marker = new google.maps.Marker({
+	    position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+	    map: map,
+	    title: $scope.data[$scope.indx].title
+  	});
+
 	});
 
 app.controller('first', function ($scope) {
@@ -103,6 +109,11 @@ app.controller('first', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('second', function ($scope) {
@@ -111,6 +122,11 @@ app.controller('second', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('third', function ($scope) {
@@ -119,6 +135,11 @@ app.controller('third', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('fourth', function ($scope) {
@@ -127,6 +148,11 @@ app.controller('fourth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('fifth', function ($scope) {
@@ -135,6 +161,11 @@ app.controller('fifth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('sixth', function ($scope) {
@@ -143,6 +174,11 @@ app.controller('sixth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('seventh', function ($scope) {
@@ -151,6 +187,11 @@ app.controller('seventh', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('eighth', function ($scope) {
@@ -159,6 +200,11 @@ app.controller('eighth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('ninth', function ($scope) {
@@ -167,6 +213,11 @@ app.controller('ninth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('tenth', function ($scope) {
@@ -175,6 +226,11 @@ app.controller('tenth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('eleventh', function ($scope) {
@@ -183,6 +239,11 @@ app.controller('eleventh', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('twelfth', function ($scope) {
@@ -191,6 +252,11 @@ app.controller('twelfth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('thirteenth', function ($scope) {
@@ -199,6 +265,11 @@ app.controller('thirteenth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('fourteenth', function ($scope) {
@@ -207,6 +278,11 @@ app.controller('fourteenth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('fifteenth', function ($scope) {
@@ -215,6 +291,11 @@ app.controller('fifteenth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('sixteenth', function ($scope) {
@@ -223,6 +304,11 @@ app.controller('sixteenth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('seventeenth', function ($scope) {
@@ -231,6 +317,11 @@ app.controller('seventeenth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('eighteenth', function ($scope) {
@@ -239,6 +330,11 @@ app.controller('eighteenth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('nineteenth', function ($scope) {
@@ -247,6 +343,11 @@ app.controller('nineteenth', function ($scope) {
     center: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
     zoom: 17
   });
+	let marker = new google.maps.Marker({
+		position: {lat: $scope.data[$scope.indx].latitude, lng:  $scope.data[$scope.indx].longitude},
+		map: map,
+		title: $scope.data[$scope.indx].title
+	});
 });
 
 app.controller('appController', function($scope, $http) {
