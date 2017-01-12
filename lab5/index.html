@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-translate.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1Mj2zIR3yLj2IqqLnkS3gp2k0_xg4TZA" async defer></script>
     <script src="script/script.js"></script>
@@ -112,7 +113,7 @@
 
     </div>
 
-    <div class="items" ng-repeat="count in data">
+  <div class="items" ng-repeat="count in data">
       <a href="#{{ $index }}">
         <div class="listing-list" >
           <img class="" ng-src="{{count.img_url}}">
@@ -136,7 +137,7 @@
           <button class="pull-right  btn btn-primary btn-sm" ng-disabled="lastPage()" ng-click="pageForward()">Вперед</button>
         </div>
       </div>
-    </div>
+    </div>g
 
 
     <div ng-view></div>
